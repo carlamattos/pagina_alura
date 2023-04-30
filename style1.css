@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+:root{  /* criar variavios para reutilizar no codigo*/
+    --cor-primaria: #2C3639; 
+    --cor-secundaria: #DCD7C9;
+    --cor-terciaria: #A27B5C; 
+    --cor-quaternária: #3F4E4F;
+
+    --fonte-primaria: 'Krona One', sans-serif ;
+    --fonte_secundaria: 'Montserrat', sans-serif 
+}
+*{
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    /* height: 100vh;  ocupar a altura toda da tela */
+    box-sizing: border-box; /* Nada sai da tela quando diminuir o tamanho*/
+    background-color:var(--cor-primaria);
+    color: var(--cor-secundaria);
+}
+.cabecalho{
+    padding: 4% 0% 2% 14%;
+    box-shadow: 0px 2px 9px 0px var(--cor-terciaria);
+}
+.cabecalho_menu{
+    display: flex;
+    gap: 80px;
+}
+.cabecalho_menu_link{
+    font-family: var(--fonte_secundaria) ;
+    font-size: 21,25rem;
+    color: var(--cor-terciaria);
+    text-decoration: none; 
+}
+.cabecalho_menu_link:hover{ /* hover para dar sombreamento quando o mause passar*/
+    background-color:  #272727;
+    color: var(--cor-secundaria);
+    text-decoration: underline;
+}
+.apresentacao{
+    padding: 5% 10%;
+    display: flex; /*Deixar todo conteudo alinhado*/
+    align-items: center; /* Deixar todo conteudo alinhado no centro*/
+    justify-content: space-between;  /*Formas de posocionar conteudo*/
+    gap: 82px;
+    
+}
+.apresentacao_conteudo{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /*Ela especifica no CSS o tamanho dos espaços entre linhas e colunas em layouts de grid, flex e multi-column. Sua sintaxe é bem simples e ela aceita um ou dois valores.*/   
+}
+.apresentacao_conteudo_titulo{
+    font-size: 1.875rem;
+    font-family: var(--fonte-primaria) ;
+}
+.titulo-destaque{
+    color: var(--cor-terciaria);
+}
+.apresentacao_conteudo_paragrafo{
+    font-size: 1,125rem;
+    font-family: var(--fonte_secundaria);
+}
+.curriculo{
+    padding: 5% 10%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 82px;
+}
+.curriculo_conteudo{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.dados_pessoais{
+    list-style-type: none;
+    padding: 0% 2%;
+    font-family:  var(--fonte_secundaria) ;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.curso{
+    padding: 0% 5%;
+    font-family:  var(--fonte_secundaria);
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+   
+}
+.titulo_curriculo{
+    font-family:  var(--fonte-primaria) ;
+}
+.titulos_destaques{
+    font-family: var(--fonte-primaria) ;
+}
+.apresentacao_links{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+.Subititulo_botoes{
+    font-family:  var(--fonte-primaria) ;
+    font-size: 1rem;
+}
+.apresentacao_links_links{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background-color: var(--cor-primaria);
+    width: 50%;
+    color: var(--cor-secundaria);
+    font-family: var(--fonte_secundaria) ;
+    font-size: 1,125rem;
+    text-align: center;
+    text-decoration: none; /*Tirar a decoraçao ou sublinhado dos links*/
+    border-radius: 5px;
+    padding: 10px 0px;
+    margin-right: 2%;
+    box-shadow: 0px 0px 5px 3px var(--cor-terciaria);
+}
+.apresentacao_links_links:hover{
+    background-color:var(--cor-quaternária);
+}
+.imagem{
+    width: 50%;
+    border-radius: 20px;
+}
+.rodape{
+    background-color:var(--cor-terciaria);
+    padding: 20px;
+    text-align: center;
+    font-family: var(--fonte_secundaria); 
+    color: var(--cor-primaria);
+}
+
+@media(max-width: 1200px){
+    .cabecalho{
+        padding: 10%;
+    }
+    .cabecalho_menu{
+       justify-content: center;
+    }
+    .apresentacao{
+        justify-content: center;
+        padding: 5%;
+        flex-direction: column-reverse;
+    }
+    .apresentacao_conteudo{
+        width: auto;
+        
+    }
+    .curriculo{
+        justify-content: center;
+        padding: 5%;
+        flex-direction: column-reverse;
+    }
+    .curriculo_conteudo{
+        width: auto;
+    }
+}
+
